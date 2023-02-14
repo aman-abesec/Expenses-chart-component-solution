@@ -9,8 +9,10 @@ body{
 .main-container{
   display:flex;
   flex-direction: column;
-  width:50vw;
+  width:40vw;
   margin:30px auto 0 auto;
+  justify-content: center;
+  /* align-items: center; */
 }
 .upper{
   background-color:hsl(10, 79%, 65%);
@@ -55,12 +57,16 @@ body{
   margin:50px 0px;
 }
 .middle-chat div{
-  width:90%;
+  width:80%;
   text-align: center;
 }
-.middle-chat div span{
+.middle-chat div .day{
   font-size: 0.6rem;
   color:#555;
+}
+.clicked{
+  font-size: 0.5rem;
+  display: none;
 }
 .inner-wrape{
   width:100%;
@@ -72,4 +78,10 @@ body{
 }
 .medium-heading-blck{
   font-size:0.8rem;
+}
+@media only screen and (max-width:400px)  {
+  .main-container{
+    width:90vw;
+  }
+}
 }
