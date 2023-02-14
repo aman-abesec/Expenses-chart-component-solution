@@ -28,6 +28,8 @@ Users should be able to:
 - **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
 
 ### Screenshot
+![image](https://user-images.githubusercontent.com/92168231/218768539-6f03ed74-93af-4404-9583-5962468cea77.png)
+
 
 ### Links
 
