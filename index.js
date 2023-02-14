@@ -31,11 +31,22 @@ var data=[
 var middleChat=document.querySelector('.middle-chat');
 for(let i=0;i<data.length;i++){
   if(data[i].day==='wed'){
-    middleChat.innerHTML+='<div><div class=\'inner-wrape active\' style=height:'+(data[i].amount)*2+'px></div> <span>'+data[i].day+'</span></div>';
+    middleChat.innerHTML+='<div class=\'outer-wrape\'><span class=\'clicked\'>'+(data[i].amount)+'</span><div class=\'inner-wrape active\' style=height:'+(data[i].amount)*2+'px></div> <span class=\'day\' >'+data[i].day+'</span></div>';
   }
   else{
-    middleChat.innerHTML+='<div><div class=\'inner-wrape\' style=height:'+(data[i].amount)*2+'px></div> <span>'+data[i].day+'</span></div>';
+    middleChat.innerHTML+='<div class=\'outer-wrape\'><span class=\'clicked\'>'+(data[i].amount)+'</span><div class=\'inner-wrape\' style=height:'+(data[i].amount)*2+'px></div> <span class=\'day\' >'+data[i].day+'</span></div>';
   }
+}
+var mdlChat=document.querySelectorAll('.outer-wrape');
+for(var i=0;i<mdlChat.length;i++){
+  mdlChat[i].addEventListener(('mouseover'),function(){
+    this.firstChild.style.display='block';
+  })
+}
+for(var i=0;i<mdlChat.length;i++){
+  mdlChat[i].addEventListener(('mouseleave'),function(){
+    this.firstChild.style.display='none';
+  })
 }
 // var reqData=new Request('./data.json');
 // fetch(reqData).then((data)=>{
